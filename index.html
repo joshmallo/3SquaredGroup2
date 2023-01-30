@@ -6,9 +6,25 @@ e
         <meta name ="viewport" content="width-device-width, initial-scale=1.0">
         <title>Leaflet Example</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+        <style>
+            #map{
+                width:100%;
+                height:100vh;
+            }
+        </style>
     </head>
     <body>
-        <div class="div">Hello your mum</div>
+        <div id="map"></div>
     </body>
 </html>
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script>
+    //map initialization
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    //osm layer
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+</script>
