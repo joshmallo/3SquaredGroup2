@@ -11,9 +11,7 @@ var response = fetch("response.json")
         }
         new L.marker(latlngs[0]).addTo(map)
         new L.marker(latlngs[latlngs.length - 1]).addTo(map)
-        console.log(latlngs[0]);
-        console.log(latlngs[latlngs.length - 1]);
-        var polyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
+        var polyline = L.polyline(latlngs, { color: 'blue' }).addTo(map);
         map.fitBounds(polyline.getBounds());
     })
 
