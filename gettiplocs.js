@@ -6,6 +6,7 @@ let gettiplocs = fetch("tiplocs.json")
         for (const item of data) {
                 var p = document.createElement('p');
                 p.innerHTML = item.Location;
+                p.id = item.TIPLOC;
                 container.append(p);
             }
         }

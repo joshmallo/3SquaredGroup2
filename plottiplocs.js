@@ -25,8 +25,7 @@ let r = fetch("response.json")
     .then(r => r.json())
     .then(data => {
         for (const item of data) {
-            if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure')) {
-                console.log(item)
+            if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') && (item != data[0] && item != data[data.length[-1]])) {
                 var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: stationIcon })
                     .addTo(map)
                     .bindPopup(item.location);

@@ -15,12 +15,17 @@
 
         #menu {
             width: 20%;
-            height: 50vh;
+            height: 70vh;
             position: fixed;
             margin-left: 20px;
             transform: translateY(-50%);
             top: 50%;
-
+            opacity: 40%;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #menu:hover{
+            opacity:100%;
+            transition: opacity 0.2s;
         }
 
         .floatingGroup{
