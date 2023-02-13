@@ -1,0 +1,131 @@
+
+Skip to content
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+@gcagriffin
+joshmallo /
+3SquaredGroup2
+Public
+
+Fork your own copy of joshmallo/3SquaredGroup2
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+3SquaredGroup2/index.html
+@dylanwares
+dylanwares plots trains tiplocs
+Latest commit 010a27b Feb 13, 2023
+History
+3 contributors
+@Josh264
+@dylanwares
+@gcagriffin
+57 lines (48 sloc) 1.77 KB
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Leaflet Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script type="text/javascript" src="response.json"></script>
+<script>
+    //map initialization
+    // Initialize a map centered at (53, 12) at zoom level 5
+    var map = L.map('map').setView([51, -0.09],8);
+
+    // Style URL format in XYZ PNG format; see our documentation for more options
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    //Custom Station & Train Icons @gcagriffin
+    var stationIcon = L.icon({
+    iconUrl: 'station.png',
+    shadowUrl: 'station.png',
+
+    iconSize:     [20, 13], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var trainIcon = L.icon({
+    iconUrl: 'train.png',
+    shadowUrl: 'train.png',
+
+    iconSize:     [24, 24], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    let response = fetch("response.json")
+        .then (response => response.json())
+        .then (data => {
+            for (const item of data){
+                if (item.hasOwnProperty('latLong')){
+                    console.log(item)
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon}).addTo(map)
+                }
+            }
+        })
+
+
+    function getLongLat(item){
+
+    }
+</script>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+3SquaredGroup2/index.html at Develop-Dylan · joshmallo/3SquaredGroup2
