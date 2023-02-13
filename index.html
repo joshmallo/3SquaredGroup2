@@ -28,30 +28,6 @@
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 <script type="text/javascript" src="response.json"></script>
-<script>
-    //map initialization
-    // Initialize a map centered at (53, 12) at zoom level 5
-    var map = L.map('map').setView([51, -0.09],8);
-
-    // Style URL format in XYZ PNG format; see our documentation for more options
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    let response = fetch("response.json")
-        .then (response => response.json())
-        .then (data => {
-            for (const item of data){
-                if (item.hasOwnProperty('latLong')){
-                    console.log(item)
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude]).addTo(map)
-                }
-            }
-        })
-
-
-    function getLongLat(item){
-
-    }
-</script>
+<script type="text/javascript" src="map.js"></script>
+<!-- <script type="text/javascript" src="plottiplocs.js"></script> -->
+<script type="text/javascript" src="route.js"></script>  
