@@ -82,7 +82,7 @@ History
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [10, -15] // point from which the popup should open relative to the iconAnchor
     });
 
     var trainIcon = L.icon({
@@ -93,7 +93,7 @@ History
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [10, -15] // point from which the popup should open relative to the iconAnchor
     });
 
     let response = fetch("response.json")
@@ -102,14 +102,13 @@ History
             for (const item of data){
                 if (item.hasOwnProperty('latLong')){
                     console.log(item)
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon}).addTo(map)
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon})
+                        .addTo(map)
+                        .bindPopup(item.location);
                 }
             }
         })
-
-
     function getLongLat(item){
-
     }
 </script>
 Footer
