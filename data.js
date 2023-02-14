@@ -13,6 +13,11 @@ fetch('https://traindata-stag-api.railsmart.io/api/trains/tiploc/CREWEMD,WLSDEUT
     //change file name 
     fs.writeFileSync('12-13_data.json', JSON.stringify(data, null, 2), 'utf-8');
     console.log(data);
+  // Print only ID or TIPLOCs
+//     for (let i = 0; i < data.length; i++) {
+//       console.log(`Activation ID: ${data[i].activationId}, Schedule ID: ${data[i].scheduleId}`);
+//       console.log(`Origin: ${data[i].originTiploc}, Destination: ${data[i].destinationTiploc}`);
+//     }
   })
   .catch(error => {
     console.error('Error fetching data:', error);
