@@ -1,6 +1,6 @@
 //map initialization
 // Initialize a map centered at (53, 12) at zoom level 5
-var map = L.map('map').setView([51, -0.09], 8);
+var map = L.map('map').setView([52.4710531, -2.4481026], 6.69);
 
 // Style URL format in XYZ PNG format; see our documentation for more options
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
