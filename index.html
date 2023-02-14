@@ -38,35 +38,47 @@ History
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Leaflet Example</title>
+    <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <style>
+        h2 {
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 5%;
+       }
         body {
             margin: 0%;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 2%;
+            padding-left: 0%;
+            padding-right: 0%;
+            padding-top: 0%;
+            position: relative;
         }
         #map {
-            width: 100%;
+            width: 90%;
             height: 90vh;
+            margin-left:5%;
+            position: absolute;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h2><b><u>3Squared Team Two: National Rail Map</u></b></h2>
+        <!--<button class="w3-button w3-dark-grey w3-xlarge" onclick="openSidebar()">&#9776;</button>-->
+    </header>
     <div id="map"></div>
 </body>
-
 </html>
+
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 <script type="text/javascript" src="response.json"></script>
 <script>
     //map initialization
     // Initialize a map centered at (53, 12) at zoom level 5
-    var map = L.map('map').setView([52, -1.5],8);
-
+    var map = L.map('map').setView([53.226026, -1.425414],6);8
     // Style URL format in XYZ PNG format; see our documentation for more options
     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
@@ -78,11 +90,11 @@ History
     iconUrl: 'station.png',
     shadowUrl: 'station.png',
 
-    iconSize:     [30, 19.5], // size of the icon
+    iconSize:     [20, 13], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [10, 5], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [10, -15] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [0, -5] // point from which the popup should open relative to the iconAnchor
     });
 
     var trainIcon = L.icon({
@@ -93,48 +105,74 @@ History
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [10, -15] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [0, -5] // point from which the popup should open relative to the iconAnchor
     });
 
-    /*let response = fetch("response.json")
-        .then (response => response.json())
-        .then (data => {
-            for (const item of data){
-                if (item.hasOwnProperty('latLong')){
-                    console.log(item)
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon})
-                        .addTo(map)
-                        .bindPopup(item.location + " (" + item.tiploc + ")");
-                }
-            }
-        })
-    function getLongLat(item){
-    }*/
+//JavaScript - Leaflet / Data Collation
+//Headers @VMiksta    
+const headers = new Headers();
+headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
+headers.append('X-ApiVersion', '1');
 
-var latlngs = [];
+var count = 0;
+var arrSchedule = [];
+//Fetch Train Schedules (defunct, for now)
+fetch('https://traindata-stag-api.railsmart.io/api/trains/tiploc/EDINBUR/2023-02-06 00:00:00/2023-02-13 23:59:59', 
 
-var response = fetch("response.json")
-    .then(response => response.json())
+{ headers: headers })  
+    .then(schedules => schedules.json())
     .then(data => {
+        for(const item of data) {
+            var schdl = [item.ActivationID, item.ScheduleID]
+            arrSchedule.push(schdl);
+            //Extract ScheduleID and ActivationID to JSON file
+            var schedule = {
+                activationID : item.activationID,
+                scheduleID : item.scheduleID
+            }
+            const FileSystem = require('fs');
+            fs.writeFile('schedules.json', JSON.stringify(schedule)), err => {
+                if(err) throw err;
+            }
+        }
+    })
+
+var moves = ['17832809/13669873','17833820/14224567', '17833260/13670151', '17834026/14555023', '17833468/14222281'];  
+//Fetch Train Movements
+for(i in moves){//done manually for now, this will be changed later
+fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/'+moves[i], { headers: headers })
+//fetch('schedules.json')
+    .then(movements => movements.json())
+    .then(data => {
+        var latlngs = [];
         for (const item of data) {
             if (item.hasOwnProperty('latLong')) {
                 var latlng = [item.latLong.latitude, item.latLong.longitude];
                 latlngs.push(latlng);
                 //Display stations
-                var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon})
+                if(!item.hasOwnProperty('pass')) {
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon})
                         .addTo(map)
                         .bindPopup(item.location + " (" + item.tiploc + ")");
+                }
+                if(item.hasOwnProperty('arrival') && !item.hasOwnProperty('departure')){
+                    count++;
+                }
             }
         }
-        new L.marker(latlngs[0]).addTo(map)
-        new L.marker(latlngs[latlngs.length - 1]).addTo(map)
-        console.log(latlngs[0]);
-        console.log(latlngs[latlngs.length - 1]);
-        var polyline = L.polyline(latlngs, { color: 'blue' }).addTo(map)
+        //iterate through different train schedules
+        //console.log(latlngs[0].latitude, latlngs[0].longitude);
+        //console.log(latlngs[latlngs.length - 1].latitude, latlngs[latlngs.length - 1].longitude);
+        var polyline = L.polyline([latlngs], { color: 'blue' }).addTo(map)
         map.fitBounds(polyline.getBounds());
+            
+        
     })
+}
 </script>
-<!-- <script type="text/javascript" src="plottiplocs.js"></script> -->
+
+<html>
+<div class="Footer">
 Footer
 © 2023 GitHub, Inc.
 Footer navigation
@@ -152,3 +190,5 @@ Footer navigation
     About
 
 3SquaredGroup2/index.html at Develop-Dylan · joshmallo/3SquaredGroup2
+</div>
+</html>
