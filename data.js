@@ -11,7 +11,7 @@ fetch('https://traindata-stag-api.railsmart.io/api/trains/tiploc/CREWEMD,WLSDEUT
   .then(res => res.json())
   .then(data => {
     //change file name 
-    fs.writeFileSync('12-13_data.json', JSON.stringify(data, null, 2), 'utf-8');
+    fs.writeFileSync('data.json', JSON.stringify(data, null, 2), 'utf-8');
     console.log(data);
   // Print only ID or TIPLOCs
 //     for (let i = 0; i < data.length; i++) {
