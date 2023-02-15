@@ -1,0 +1,635 @@
+[
+  {
+    "departure": "2232",
+    "tiploc": "SOTD107",
+    "location": "SOTON W DOCKS BERTH 109",
+    "latLong": {
+      "latitude": 50.90646936,
+      "longitude": -1.432773238
+    }
+  },
+  {
+    "departure": "2246",
+    "arrival": "2244",
+    "tiploc": "MBRKDX",
+    "location": "MILLBROOK DOCK EXIT",
+    "latLong": {
+      "latitude": 50.91130054,
+      "longitude": -1.438133983
+    }
+  },
+  {
+    "departure": "2307",
+    "arrival": "2249",
+    "tiploc": "SOTODGL",
+    "location": "SOUTHAMPTON DOWN LOOP",
+    "latLong": {
+      "latitude": 50.90847539,
+      "longitude": -1.426045347
+    }
+  },
+  {
+    "departure": "2311",
+    "arrival": "2309",
+    "tiploc": "SOTON",
+    "location": "SOUTHAMPTON CENTRAL",
+    "latLong": {
+      "latitude": 50.9076,
+      "longitude": -1.4137
+    }
+  },
+  {
+    "pass": "2314",
+    "tiploc": "NTHMJN",
+    "location": "NORTHAM JN",
+    "latLong": {
+      "latitude": 50.90876569,
+      "longitude": -1.391917627
+    }
+  },
+  {
+    "pass": "2316",
+    "tiploc": "STDENYS",
+    "location": "ST DENYS",
+    "latLong": {
+      "latitude": 50.9219,
+      "longitude": -1.3875
+    }
+  },
+  {
+    "pass": "2320",
+    "tiploc": "SOTPKWY",
+    "location": "SOUTHAMPTON AIRPORT PARKWY",
+    "latLong": {
+      "latitude": 50.95080673,
+      "longitude": -1.363101804
+    }
+  },
+  {
+    "departure": "2330",
+    "arrival": "2323",
+    "tiploc": "ELGH",
+    "location": "EASTLEIGH",
+    "latLong": {
+      "latitude": 50.9692,
+      "longitude": -1.3499
+    }
+  },
+  {
+    "pass": "2338",
+    "tiploc": "SHAWFUJ",
+    "location": "SHAWFORD UP JUNCTION"
+  },
+  {
+    "pass": "2345",
+    "tiploc": "WNCHSTR",
+    "location": "WINCHESTER",
+    "latLong": {
+      "latitude": 51.0672,
+      "longitude": -1.3197
+    }
+  },
+  {
+    "pass": "2359",
+    "tiploc": "WALRSAL",
+    "location": "WALLERS ASH LOOP",
+    "latLong": {
+      "latitude": 51.15029588,
+      "longitude": -1.280448887
+    }
+  },
+  {
+    "pass": "0018",
+    "tiploc": "WRTINGJ",
+    "location": "WORTING JN",
+    "latLong": {
+      "latitude": 51.25814745,
+      "longitude": -1.145419631
+    }
+  },
+  {
+    "pass": "0022",
+    "tiploc": "BSNGSTK",
+    "location": "BASINGSTOKE",
+    "latLong": {
+      "latitude": 51.2682,
+      "longitude": -1.0873
+    }
+  },
+  {
+    "pass": "0029",
+    "tiploc": "BMLY",
+    "location": "BRAMLEY (HANTS)",
+    "latLong": {
+      "latitude": 51.3305,
+      "longitude": -1.0606
+    }
+  },
+  {
+    "pass": "0037",
+    "tiploc": "SCOTEJN",
+    "location": "SOUTHCOTE JN",
+    "latLong": {
+      "latitude": 51.441403,
+      "longitude": -0.997594
+    }
+  },
+  {
+    "pass": "0039",
+    "tiploc": "RDNGORJ",
+    "location": "OXFORD ROAD JN",
+    "latLong": {
+      "latitude": 51.45701632,
+      "longitude": -0.98878608
+    }
+  },
+  {
+    "pass": "0041",
+    "tiploc": "REDGWJN",
+    "location": "READING WEST JN",
+    "latLong": {
+      "latitude": 51.46222218,
+      "longitude": -0.992917506
+    }
+  },
+  {
+    "pass": "0043",
+    "tiploc": "TILHEJN",
+    "location": "TILEHURST EAST JN.",
+    "latLong": {
+      "latitude": 51.46991209,
+      "longitude": -1.02506986
+    }
+  },
+  {
+    "pass": "0050",
+    "tiploc": "GORASTR",
+    "location": "GORING & STREATLEY",
+    "latLong": {
+      "latitude": 51.522,
+      "longitude": -1.133
+    }
+  },
+  {
+    "pass": "0059",
+    "tiploc": "DIDCTEJ",
+    "location": "DIDCOT EAST JN",
+    "latLong": {
+      "latitude": 51.604675,
+      "longitude": -1.222658
+    }
+  },
+  {
+    "pass": "0105",
+    "tiploc": "DIDCTNJ",
+    "location": "DIDCOT NORTH JN",
+    "latLong": {
+      "latitude": 51.620683,
+      "longitude": -1.24474
+    }
+  },
+  {
+    "pass": "0118",
+    "tiploc": "KNNGTNJ",
+    "location": "KENNINGTON JN",
+    "latLong": {
+      "latitude": 51.722797,
+      "longitude": -1.246185
+    }
+  },
+  {
+    "pass": "0119",
+    "tiploc": "HINKN",
+    "location": "HINKSEY NORTH",
+    "latLong": {
+      "latitude": 51.7434601,
+      "longitude": -1.262957337
+    }
+  },
+  {
+    "pass": "0122",
+    "tiploc": "OXFD",
+    "location": "OXFORD",
+    "latLong": {
+      "latitude": 51.754131,
+      "longitude": -1.270588
+    }
+  },
+  {
+    "pass": "0125",
+    "tiploc": "WVCTJN",
+    "location": "WOLVERCOTE JN",
+    "latLong": {
+      "latitude": 51.792556,
+      "longitude": -1.294878
+    }
+  },
+  {
+    "pass": "0134",
+    "tiploc": "HEYFORD",
+    "location": "HEYFORD",
+    "latLong": {
+      "latitude": 51.918728,
+      "longitude": -1.299391
+    }
+  },
+  {
+    "pass": "0140",
+    "tiploc": "AYNHOJ",
+    "location": "AYNHO JN",
+    "latLong": {
+      "latitude": 51.998782,
+      "longitude": -1.280214
+    }
+  },
+  {
+    "pass": "0145",
+    "tiploc": "BNBRDJ",
+    "location": "BANBURY DEPOT JN"
+  },
+  {
+    "pass": "0145",
+    "tiploc": "BNBR",
+    "location": "BANBURY",
+    "latLong": {
+      "latitude": 52.060615,
+      "longitude": -1.327815
+    }
+  },
+  {
+    "pass": "0148",
+    "tiploc": "BNBRRJN",
+    "location": "RESERVOIR JUNCTION"
+  },
+  {
+    "pass": "0156",
+    "tiploc": "FENNYCM",
+    "location": "FENNY COMPTON",
+    "latLong": {
+      "latitude": 52.1711,
+      "longitude": -1.374349
+    }
+  },
+  {
+    "pass": "0208",
+    "tiploc": "LMNGTNS",
+    "location": "LEAMINGTON SPA",
+    "latLong": {
+      "latitude": 52.28461,
+      "longitude": -1.53621
+    }
+  },
+  {
+    "pass": "0211",
+    "tiploc": "MLVTJN",
+    "location": "MILVERTON JN",
+    "latLong": {
+      "latitude": 52.29552187,
+      "longitude": -1.555449957
+    }
+  },
+  {
+    "pass": "0218",
+    "tiploc": "KENLWTH",
+    "location": "KENILWORTH JNS",
+    "latLong": {
+      "latitude": 52.351391,
+      "longitude": -1.567279
+    }
+  },
+  {
+    "pass": "0221",
+    "tiploc": "COVNGHJ",
+    "location": "GIBBET HILL JUNCTION",
+    "latLong": {
+      "latitude": 52.374404,
+      "longitude": -1.539731
+    }
+  },
+  {
+    "pass": "0225",
+    "tiploc": "COVNTRY",
+    "location": "COVENTRY",
+    "latLong": {
+      "latitude": 52.40077,
+      "longitude": -1.513751
+    }
+  },
+  {
+    "pass": "0229",
+    "tiploc": "COVNCRD",
+    "location": "COUNDON RD LC",
+    "latLong": {
+      "latitude": 52.41254054,
+      "longitude": -1.523621882
+    }
+  },
+  {
+    "pass": "0232",
+    "tiploc": "THREESJ",
+    "location": "THREE SPIRES JN",
+    "latLong": {
+      "latitude": 52.441239,
+      "longitude": -1.499703
+    }
+  },
+  {
+    "pass": "0235",
+    "tiploc": "HAWKSLA",
+    "location": "HAWKESBURY LANE",
+    "latLong": {
+      "latitude": 52.460437,
+      "longitude": -1.477789
+    }
+  },
+  {
+    "pass": "0242",
+    "tiploc": "NNTNCHC",
+    "location": "NUNEATON CHILVERS COTON JN",
+    "latLong": {
+      "latitude": 52.523366,
+      "longitude": -1.459524
+    }
+  },
+  {
+    "departure": "0248",
+    "arrival": "0246",
+    "tiploc": "NNTN",
+    "location": "NUNEATON",
+    "latLong": {
+      "latitude": 52.526666,
+      "longitude": -1.464115
+    }
+  },
+  {
+    "pass": "0301",
+    "tiploc": "AMNGTNJ",
+    "location": "AMINGTON JUNCTION",
+    "latLong": {
+      "latitude": 52.63864256,
+      "longitude": -1.664043563
+    }
+  },
+  {
+    "pass": "0309",
+    "tiploc": "LCHTNJ",
+    "location": "LICHFIELD NORTH JN (LL)",
+    "latLong": {
+      "latitude": 52.69083767,
+      "longitude": -1.806615519
+    }
+  },
+  {
+    "pass": "0317",
+    "tiploc": "RUGLYNJ",
+    "location": "RUGELEY NORTH JN",
+    "latLong": {
+      "latitude": 52.77150336,
+      "longitude": -1.932635437
+    }
+  },
+  {
+    "pass": "0331",
+    "tiploc": "COLWICH",
+    "location": "COLWICH",
+    "latLong": {
+      "latitude": 52.789043,
+      "longitude": -1.983546
+    }
+  },
+  {
+    "pass": "0333",
+    "tiploc": "MFDB",
+    "location": "MILFORD AND BROCTON",
+    "latLong": {
+      "latitude": 52.789919,
+      "longitude": -2.03944
+    }
+  },
+  {
+    "pass": "0340",
+    "tiploc": "STAFTVJ",
+    "location": "STAFFORD TRENT VALLEY JN",
+    "latLong": {
+      "latitude": 52.79724,
+      "longitude": -2.115655
+    }
+  },
+  {
+    "pass": "0341",
+    "tiploc": "STAFFRD",
+    "location": "STAFFORD",
+    "latLong": {
+      "latitude": 52.803754,
+      "longitude": -2.12298
+    }
+  },
+  {
+    "pass": "0346",
+    "tiploc": "SLIGHTJ",
+    "location": "SEARCHLIGHT LANE JN",
+    "latLong": {
+      "latitude": 52.859777,
+      "longitude": -2.194122
+    }
+  },
+  {
+    "pass": "0358",
+    "tiploc": "MADELEY",
+    "location": "MADELEY (STAFFS)",
+    "latLong": {
+      "latitude": 52.994728,
+      "longitude": -2.341947
+    }
+  },
+  {
+    "pass": "0408",
+    "tiploc": "CREWBHJ",
+    "location": "CREWE BASFORD HALL JN",
+    "latLong": {
+      "latitude": 53.064544,
+      "longitude": -2.418547
+    }
+  },
+  {
+    "pass": "0413",
+    "tiploc": "CREWBHN",
+    "location": "CREWE BAS HALL S.S.N.",
+    "latLong": {
+      "latitude": 53.079824,
+      "longitude": -2.431141
+    }
+  },
+  {
+    "departure": "0418",
+    "arrival": "0418",
+    "tiploc": "CREWSGJ",
+    "location": "CREWE SALOP GOODS JN",
+    "latLong": {
+      "latitude": 53.085084,
+      "longitude": -2.431268
+    }
+  },
+  {
+    "pass": "0424",
+    "tiploc": "CREWSBG",
+    "location": "CREWE SYDNEY BRIDGE",
+    "latLong": {
+      "latitude": 53.09798985,
+      "longitude": -2.431111403
+    }
+  },
+  {
+    "pass": "0431",
+    "tiploc": "SBCH",
+    "location": "SANDBACH",
+    "latLong": {
+      "latitude": 53.1501,
+      "longitude": -2.39375
+    }
+  },
+  {
+    "pass": "0447",
+    "tiploc": "ALDEDGE",
+    "location": "ALDERLEY EDGE",
+    "latLong": {
+      "latitude": 53.3038,
+      "longitude": -2.23668
+    }
+  },
+  {
+    "pass": "0449",
+    "tiploc": "WLMSL",
+    "location": "WILMSLOW",
+    "latLong": {
+      "latitude": 53.3271,
+      "longitude": -2.22601
+    }
+  },
+  {
+    "pass": "0454",
+    "tiploc": "CHDH",
+    "location": "CHEADLE HULME",
+    "latLong": {
+      "latitude": 53.375768,
+      "longitude": -2.188182
+    }
+  },
+  {
+    "pass": "0456",
+    "tiploc": "ADSWDRD",
+    "location": "ADSWOOD ROAD JN",
+    "latLong": {
+      "latitude": 53.387166,
+      "longitude": -2.175844
+    }
+  },
+  {
+    "pass": "0458",
+    "tiploc": "STKPE1",
+    "location": "EDGELEY JN NO1",
+    "latLong": {
+      "latitude": 53.397381,
+      "longitude": -2.164599
+    }
+  },
+  {
+    "pass": "0458",
+    "tiploc": "STKPE2",
+    "location": "EDGELEY JN NO2",
+    "latLong": {
+      "latitude": 53.40014372,
+      "longitude": -2.162992441
+    }
+  },
+  {
+    "pass": "0459",
+    "tiploc": "STKP",
+    "location": "STOCKPORT",
+    "latLong": {
+      "latitude": 53.405574,
+      "longitude": -2.163263
+    }
+  },
+  {
+    "pass": "0503",
+    "tiploc": "HTNOJN",
+    "location": "HEATON NORRIS JN",
+    "latLong": {
+      "latitude": 53.415058,
+      "longitude": -2.170355
+    }
+  },
+  {
+    "pass": "0510",
+    "tiploc": "SLDLJN",
+    "location": "SLADE LANE JN",
+    "latLong": {
+      "latitude": 53.451771,
+      "longitude": -2.195837
+    }
+  },
+  {
+    "pass": "0514",
+    "tiploc": "ARDWCKJ",
+    "location": "ARDWICK JN",
+    "latLong": {
+      "latitude": 53.471841,
+      "longitude": -2.215239
+    }
+  },
+  {
+    "pass": "0517",
+    "tiploc": "MNCRPIC",
+    "location": "MANCHESTER PICCADILLY",
+    "latLong": {
+      "latitude": 53.476951,
+      "longitude": -2.229506
+    }
+  },
+  {
+    "pass": "0520",
+    "tiploc": "MNCROXR",
+    "location": "MANCHESTER OXFORD ROAD",
+    "latLong": {
+      "latitude": 53.4738,
+      "longitude": -2.24227
+    }
+  },
+  {
+    "pass": "0523",
+    "tiploc": "MNCRDGT",
+    "location": "DEANSGATE",
+    "latLong": {
+      "latitude": 53.4741,
+      "longitude": -2.25095
+    }
+  },
+  {
+    "pass": "0527",
+    "tiploc": "TRFDPEJ",
+    "location": "TRAFFORD PARK EAST JN",
+    "latLong": {
+      "latitude": 53.46219138,
+      "longitude": -2.290728138
+    }
+  },
+  {
+    "pass": "0528",
+    "tiploc": "MNCRUFG",
+    "location": "MANCHESTER UTD FOOTBALL GD",
+    "latLong": {
+      "latitude": 53.462254,
+      "longitude": -2.2906683
+    }
+  },
+  {
+    "arrival": "0531",
+    "tiploc": "TRFDEUT",
+    "location": "TRAFFORD PARK EURO TERM",
+    "latLong": {
+      "latitude": 53.4655768,
+      "longitude": -2.302876987
+    }
+  }
+]

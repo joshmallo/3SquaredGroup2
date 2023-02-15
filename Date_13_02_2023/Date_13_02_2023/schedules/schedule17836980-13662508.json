@@ -1,0 +1,57 @@
+[
+  {
+    "departure": "1251",
+    "tiploc": "STAFFRD",
+    "location": "STAFFORD",
+    "latLong": {
+      "latitude": 52.803754,
+      "longitude": -2.12298
+    }
+  },
+  {
+    "pass": "1255",
+    "tiploc": "SLIGHTJ",
+    "location": "SEARCHLIGHT LANE JN",
+    "latLong": {
+      "latitude": 52.859777,
+      "longitude": -2.194122
+    }
+  },
+  {
+    "pass": "1301",
+    "tiploc": "MADELEY",
+    "location": "MADELEY (STAFFS)",
+    "latLong": {
+      "latitude": 52.994728,
+      "longitude": -2.341947
+    }
+  },
+  {
+    "pass": "1307",
+    "tiploc": "CREWBHJ",
+    "location": "CREWE BASFORD HALL JN",
+    "latLong": {
+      "latitude": 53.064544,
+      "longitude": -2.418547
+    }
+  },
+  {
+    "departure": "1317",
+    "arrival": "1312",
+    "tiploc": "CREWE",
+    "location": "CREWE",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "arrival": "1323",
+    "tiploc": "CREWEMD",
+    "location": "CREWE T.M.D. (E)",
+    "latLong": {
+      "latitude": 53.09895795,
+      "longitude": -2.460617082
+    }
+  }
+]
