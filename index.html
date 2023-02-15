@@ -1,52 +1,15 @@
-<!--Skip to content
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
-@gcagriffin
-joshmallo /
-3SquaredGroup2
-Public
-
-Fork your own copy of joshmallo/3SquaredGroup2
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-3SquaredGroup2/index.html
-@dylanwares
-dylanwares plots trains tiplocs
-Latest commit 010a27b Feb 13, 2023
-History
-3 contributors
-@Josh264
-@dylanwares
-@gcagriffin
-57 lines (48 sloc) 1.77 KB-->
 <!DOCTYPE html>
 <html lang="eng">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Leaflet Example</title>
-    <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+    <title>National Rail Map</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <!--<script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <style>
-        h2 {
-            color: black;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            padding-left: 5%;
-       }
         body {
             margin: 0%;
             padding-left: 0%;
@@ -55,140 +18,25 @@ History
             position: relative;
         }
         #map {
-            width: 90%;
-            height: 90vh;
-            margin-left:5%;
+            right: 0%;
+            top: 0%;
+            width: 100%;
+            height: 100vh;
+            margin-top:0%;
             position: absolute;
+            z-index: -2;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h2><b><u>3Squared Team Two: National Rail Map</u></b></h2>
-        <!--<button class="w3-button w3-dark-grey w3-xlarge" onclick="openSidebar()">&#9776;</button>-->
-    </header>
     <div id="map"></div>
 </body>
 </html>
 
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-<script type="text/javascript" src="response.json"></script>
-<script>
-    //map initialization
-    // Initialize a map centered at (53, 12) at zoom level 5
-    var map = L.map('map').setView([53.226026, -1.425414],6);8
-    // Style URL format in XYZ PNG format; see our documentation for more options
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    //Custom Station & Train Icons @gcagriffin
-    var stationIcon = L.icon({
-    iconUrl: 'station.png',
-    shadowUrl: 'station.png',
-
-    iconSize:     [20, 13], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [10, 5], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -5] // point from which the popup should open relative to the iconAnchor
-    });
-
-    var trainIcon = L.icon({
-    iconUrl: 'train.png',
-    shadowUrl: 'train.png',
-
-    iconSize:     [24, 24], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [0, 10], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -5] // point from which the popup should open relative to the iconAnchor
-    });
-
-//JavaScript - Leaflet / Data Collation
-//Headers @VMiksta    
-const headers = new Headers();
-headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-headers.append('X-ApiVersion', '1');
-
-var count = 0;
-var arrSchedule = [];
-//Fetch Train Schedules (defunct, for now)
-fetch('https://traindata-stag-api.railsmart.io/api/trains/tiploc/EDINBUR/2023-02-06 00:00:00/2023-02-13 23:59:59', 
-
-{ headers: headers })  
-    .then(schedules => schedules.json())
-    .then(data => {
-        for(const item of data) {
-            var schdl = [item.ActivationID, item.ScheduleID]
-            arrSchedule.push(schdl);
-            //Extract ScheduleID and ActivationID to JSON file
-            var schedule = {
-                activationID : item.activationID,
-                scheduleID : item.scheduleID
-            }
-            const FileSystem = require('fs');
-            fs.writeFile('schedules.json', JSON.stringify(schedule)), err => {
-                if(err) throw err;
-            }
-        }
-    })
-
-var moves = ['17832809/13669873','17833820/14224567', '17833260/13670151', '17834026/14555023', '17833468/14222281'];  
-//Fetch Train Movements
-for(i in moves){//done manually for now, this will be changed later
-fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/'+moves[i], { headers: headers })
-//fetch('schedules.json')
-    .then(movements => movements.json())
-    .then(data => {
-        var latlngs = [];
-        for (const item of data) {
-            if (item.hasOwnProperty('latLong')) {
-                var latlng = [item.latLong.latitude, item.latLong.longitude];
-                latlngs.push(latlng);
-                //Display stations
-                if(!item.hasOwnProperty('pass')) {
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], {icon:stationIcon})
-                        .addTo(map)
-                        .bindPopup(item.location + " (" + item.tiploc + ")");
-                }
-                if(item.hasOwnProperty('arrival') && !item.hasOwnProperty('departure')){
-                    count++;
-                }
-            }
-        }
-        //iterate through different train schedules
-        //console.log(latlngs[0].latitude, latlngs[0].longitude);
-        //console.log(latlngs[latlngs.length - 1].latitude, latlngs[latlngs.length - 1].longitude);
-        var polyline = L.polyline([latlngs], { color: 'blue' }).addTo(map)
-        map.fitBounds(polyline.getBounds());
-            
-        
-    })
-}
-</script>
-
-<html>
-<div class="Footer">
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-3SquaredGroup2/index.html at Develop-Dylan · joshmallo/3SquaredGroup2
-</div>
-</html>
+<script type="text/javascript" src="json/response.json"></script>
+<script type="text/javascript" src="js/dataPlotting.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
