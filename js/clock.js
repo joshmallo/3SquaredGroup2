@@ -1,1 +1,1 @@
-setInterval(() => $("#dateTime").text(new Date().toLocaleString()), 1000);
+setInterval(() => document.getElementById("dateTime").innerHTML = new Date().toLocaleString()), 1000;

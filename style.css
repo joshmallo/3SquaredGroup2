@@ -71,3 +71,15 @@ p.menuOptions:hover {
 #secondMenuItems{
     overflow-y: scroll;
 }
+
+#markersInfo{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    gap: 10px;
+}

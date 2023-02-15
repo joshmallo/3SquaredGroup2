@@ -6,10 +6,18 @@ function expandMenu(e){
     headers.append('X-ApiVersion', '1');
     // var tiploc = e.currentTarget.id;
     var tiploc = 'THMSLGB';
-    fetch('https://traindata-stag-api.railsmart.io/api/trains/tiploc/' + tiploc + '/2023-02-13 00:00:00/2023-02-13 23:59:59', {headers: headers})
+    var date = new Date().toISOString();
+    date = date.substring(0, date.length - 14);
+    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, {headers: headers})
         .then (res => res.json())
         .then (data => {
             var container = document.getElementById('secondMenuItems');
+            var loading = document.createElement('p');
+            loading.innerHTML = 'Loading...';
+            loading.style.fontSize = '14px';
+            loading.style.textAlign = 'center';
+            loading.style.color = '#808080';
+            container.append(loading);
             for (const item of data) {
                 var p = document.createElement('p');
                 p.innerHTML = item.originLocation + ' - ' + item.destinationLocation;
@@ -20,6 +28,7 @@ function expandMenu(e){
                 p.classList.add('menuOptions');
                 container.append(p);
             }
+            container.removeChild(loading); 
         })
 }
 
