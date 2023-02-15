@@ -1,4 +1,4 @@
-function expandMenu(e){
+function expandMenu(e) {
     var secondMenu = document.getElementById('secondMenu');
     secondMenu.style.display = 'inline';
     const headers = new Headers();
@@ -8,16 +8,16 @@ function expandMenu(e){
     var tiploc = 'THMSLGB';
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
-    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, {headers: headers})
-        .then (res => res.json())
-        .then (data => {
+    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
+        .then(res => res.json())
+        .then(data => {
             var container = document.getElementById('secondMenuItems');
-            var loading = document.createElement('p');
-            loading.innerHTML = 'Loading...';
-            loading.style.fontSize = '14px';
-            loading.style.textAlign = 'center';
-            loading.style.color = '#808080';
-            container.append(loading);
+            var resultsCount = document.createElement('p');
+            resultsCount.innerHTML = `${data.length} trains today`;
+            resultsCount.style.fontSize = '14px';
+            resultsCount.style.textAlign = 'center';
+            resultsCount.style.color = '#808080';
+            container.append(resultsCount);
             for (const item of data) {
                 var p = document.createElement('p');
                 p.innerHTML = item.originLocation + ' - ' + item.destinationLocation;
@@ -28,19 +28,20 @@ function expandMenu(e){
                 p.classList.add('menuOptions');
                 container.append(p);
             }
-            container.removeChild(loading); 
         })
 }
 
-function closeSecondMenu(){
+function closeSecondMenu() {
     secondMenu.style.display = 'none';
+    var secondMenuContainer = document.getElementById('secondMenuItems')
+    secondMenuContainer.replaceChildren();
 }
 
-function journeyClicked(e){
+function journeyClicked(e) {
     closeSecondMenu();
-    map.eachLayer(function(layer){
-        if (layer != Location.tileLayer){
-        map.removeLayer(layer);
+    map.eachLayer(function (layer) {
+        if (layer != Location.tileLayer) {
+            map.removeLayer(layer);
         }
     })
     addTileLayer();
