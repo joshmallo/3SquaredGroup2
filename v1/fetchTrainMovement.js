@@ -14,14 +14,14 @@ for (let i = 0; i < data.length; i++) {
   fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
     .then(res => res.json())
     .then(data => {
-    //Not working atm  
-    //fs.writeFileSync(`movementByTipLoc.json`, JSON.stringify(data, null, 2), 'utf-8');
     console.log(data);
   })
     .catch(error => {
     console.error('Error fetching data:', error);
 });
 }
+
+fs.writeFileSync(`movementByTipLoc.json`, JSON.stringify(data, null, 2), 'utf-8');
 
 
 

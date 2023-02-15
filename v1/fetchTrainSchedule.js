@@ -28,11 +28,11 @@ fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/${activati
 //   fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/${activation}/${schedule}`, { headers: headers })
 //     .then(res => res.json())
 //     .then(data => {
-//     //Not working atm  
-//     //fs.writeFileSync(`schedule${activation}-${schedule}.json`, JSON.stringify(data, null, 2), 'utf-8');
 //     console.log(data);
 //   })
 //     .catch(error => {
 //     console.error('Error fetching data:', error);
 // });
 // }
+
+// fs.writeFileSync(`movementByTipLoc.json`, JSON.stringify(data, null, 2), 'utf-8');
