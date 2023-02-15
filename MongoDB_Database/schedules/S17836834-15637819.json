@@ -1,0 +1,149 @@
+[
+  {
+    "departure": "0753",
+    "tiploc": "CREWEMD",
+    "location": "CREWE T.M.D. (E)",
+    "latLong": {
+      "latitude": 53.09895795,
+      "longitude": -2.460617082
+    }
+  },
+  {
+    "departure": "0804",
+    "arrival": "0759",
+    "tiploc": "CREWE",
+    "location": "CREWE",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "pass": "0806",
+    "tiploc": "CREWSBG",
+    "location": "CREWE SYDNEY BRIDGE",
+    "latLong": {
+      "latitude": 53.09798985,
+      "longitude": -2.431111403
+    }
+  },
+  {
+    "departure": "0839",
+    "arrival": "0813",
+    "tiploc": "SBCH",
+    "location": "SANDBACH",
+    "latLong": {
+      "latitude": 53.1501,
+      "longitude": -2.39375
+    }
+  },
+  {
+    "pass": "0855",
+    "tiploc": "ALDEDGE",
+    "location": "ALDERLEY EDGE",
+    "latLong": {
+      "latitude": 53.3038,
+      "longitude": -2.23668
+    }
+  },
+  {
+    "pass": "0857",
+    "tiploc": "WLMSL",
+    "location": "WILMSLOW",
+    "latLong": {
+      "latitude": 53.3271,
+      "longitude": -2.22601
+    }
+  },
+  {
+    "pass": "0901",
+    "tiploc": "HLDGSJ",
+    "location": "HEALD GREEN SOUTH JN",
+    "latLong": {
+      "latitude": 53.3584,
+      "longitude": -2.24081
+    }
+  },
+  {
+    "pass": "0902",
+    "tiploc": "HLDG",
+    "location": "HEALD GREEN",
+    "latLong": {
+      "latitude": 53.3694,
+      "longitude": -2.2367
+    }
+  },
+  {
+    "pass": "0910",
+    "tiploc": "SLDLJN",
+    "location": "SLADE LANE JN",
+    "latLong": {
+      "latitude": 53.451771,
+      "longitude": -2.195837
+    }
+  },
+  {
+    "pass": "0913",
+    "tiploc": "ARDWCKJ",
+    "location": "ARDWICK JN",
+    "latLong": {
+      "latitude": 53.471841,
+      "longitude": -2.215239
+    }
+  },
+  {
+    "pass": "0916",
+    "tiploc": "MNCRPIC",
+    "location": "MANCHESTER PICCADILLY",
+    "latLong": {
+      "latitude": 53.476951,
+      "longitude": -2.229506
+    }
+  },
+  {
+    "pass": "0918",
+    "tiploc": "MNCROXR",
+    "location": "MANCHESTER OXFORD ROAD",
+    "latLong": {
+      "latitude": 53.4738,
+      "longitude": -2.24227
+    }
+  },
+  {
+    "pass": "0919",
+    "tiploc": "MNCRDGT",
+    "location": "DEANSGATE",
+    "latLong": {
+      "latitude": 53.4741,
+      "longitude": -2.25095
+    }
+  },
+  {
+    "departure": "0935",
+    "arrival": "0924",
+    "tiploc": "TRFDPEJ",
+    "location": "TRAFFORD PARK EAST JN",
+    "latLong": {
+      "latitude": 53.46219138,
+      "longitude": -2.290728138
+    }
+  },
+  {
+    "pass": "0937",
+    "tiploc": "MNCRUFG",
+    "location": "MANCHESTER UTD FOOTBALL GD",
+    "latLong": {
+      "latitude": 53.462254,
+      "longitude": -2.2906683
+    }
+  },
+  {
+    "arrival": "0939",
+    "tiploc": "TRFDEUT",
+    "location": "TRAFFORD PARK EURO TERM",
+    "latLong": {
+      "latitude": 53.4655768,
+      "longitude": -2.302876987
+    }
+  }
+]

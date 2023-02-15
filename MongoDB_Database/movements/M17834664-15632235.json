@@ -1,0 +1,296 @@
+[
+  {
+    "location": "ARPLEY SIDINGS",
+    "tiploc": "ARPLEYS",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:00:00",
+    "actual": "2023-02-13T15:47:00",
+    "variation": -13,
+    "plannedDeparture": "2023-02-13T16:00:00",
+    "actualDeparture": "2023-02-13T15:47:00",
+    "latLong": {
+      "latitude": 53.38482059,
+      "longitude": -2.598709022
+    }
+  },
+  {
+    "location": "ARPLEY SIDINGS H.S.",
+    "tiploc": "ARPLSHS",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:00:00",
+    "actual": "2023-02-13T15:47:00",
+    "variation": -13,
+    "plannedDeparture": "2023-02-13T16:00:00",
+    "actualDeparture": "2023-02-13T15:47:00",
+    "latLong": {
+      "latitude": 53.385411,
+      "longitude": -2.5974243
+    }
+  },
+  {
+    "location": "ARPLEY SIDINGS",
+    "tiploc": "ARPLEYS",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:00:00",
+    "actual": "2023-02-13T15:47:00",
+    "variation": -13,
+    "plannedDeparture": "2023-02-13T16:00:00",
+    "actualDeparture": "2023-02-13T15:47:00",
+    "latLong": {
+      "latitude": 53.38482059,
+      "longitude": -2.598709022
+    }
+  },
+  {
+    "location": "ARPLEY SIDINGS H.S.",
+    "tiploc": "ARPLSHS",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:00:00",
+    "actual": "2023-02-13T15:47:00",
+    "variation": -13,
+    "plannedDeparture": "2023-02-13T16:00:00",
+    "actualDeparture": "2023-02-13T15:47:00",
+    "latLong": {
+      "latitude": 53.385411,
+      "longitude": -2.5974243
+    }
+  },
+  {
+    "location": "ACTON GRANGE JN",
+    "tiploc": "ACGJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:05:00",
+    "actual": "2023-02-13T15:52:00",
+    "variation": -13,
+    "actualArrival": "2023-02-13T15:52:00",
+    "plannedArrival": "2023-02-13T16:05:00",
+    "plannedDeparture": "2023-02-13T16:05:00",
+    "actualDeparture": "2023-02-13T15:52:00",
+    "latLong": {
+      "latitude": 53.363034,
+      "longitude": -2.624034
+    }
+  },
+  {
+    "location": "WEAVER JN",
+    "tiploc": "WEAVERJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:12:00",
+    "actual": "2023-02-13T16:08:00",
+    "variation": -4,
+    "actualArrival": "2023-02-13T16:08:00",
+    "plannedArrival": "2023-02-13T16:12:00",
+    "plannedDeparture": "2023-02-13T16:12:00",
+    "actualDeparture": "2023-02-13T16:08:00",
+    "latLong": {
+      "latitude": 53.302691,
+      "longitude": -2.639255
+    }
+  },
+  {
+    "location": "ACTON BRIDGE",
+    "tiploc": "ACBG",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:14:00",
+    "actual": "2023-02-13T16:11:00",
+    "variation": -3,
+    "actualArrival": "2023-02-13T16:11:00",
+    "plannedArrival": "2023-02-13T16:14:00",
+    "plannedDeparture": "2023-02-13T16:14:00",
+    "actualDeparture": "2023-02-13T16:11:00",
+    "latLong": {
+      "latitude": 53.266144,
+      "longitude": -2.602438
+    }
+  },
+  {
+    "location": "ACTON BRIDGE",
+    "tiploc": "ACBG",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:14:00",
+    "actual": "2023-02-13T16:12:00",
+    "variation": -2,
+    "actualArrival": "2023-02-13T16:12:00",
+    "plannedArrival": "2023-02-13T16:14:00",
+    "plannedDeparture": "2023-02-13T16:14:00",
+    "actualDeparture": "2023-02-13T16:12:00",
+    "latLong": {
+      "latitude": 53.266144,
+      "longitude": -2.602438
+    }
+  },
+  {
+    "location": "HARTFORD JN",
+    "tiploc": "HARTFDJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:16:00",
+    "actual": "2023-02-13T16:13:00",
+    "variation": -3,
+    "actualArrival": "2023-02-13T16:13:00",
+    "plannedArrival": "2023-02-13T16:16:00",
+    "plannedDeparture": "2023-02-13T16:16:00",
+    "actualDeparture": "2023-02-13T16:13:00",
+    "latLong": {
+      "latitude": 53.248657,
+      "longitude": -2.567576
+    }
+  },
+  {
+    "location": "WINSFORD",
+    "tiploc": "WNSFD",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:21:00",
+    "actual": "2023-02-13T16:17:00",
+    "variation": -4,
+    "actualArrival": "2023-02-13T16:17:00",
+    "plannedArrival": "2023-02-13T16:21:00",
+    "plannedDeparture": "2023-02-13T16:21:00",
+    "actualDeparture": "2023-02-13T16:17:00",
+    "latLong": {
+      "latitude": 53.190414,
+      "longitude": -2.494334
+    }
+  },
+  {
+    "location": "WINSFORD",
+    "tiploc": "WNSFD",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:21:00",
+    "actual": "2023-02-13T16:18:00",
+    "variation": -3,
+    "actualArrival": "2023-02-13T16:18:00",
+    "plannedArrival": "2023-02-13T16:21:00",
+    "plannedDeparture": "2023-02-13T16:21:00",
+    "actualDeparture": "2023-02-13T16:18:00",
+    "latLong": {
+      "latitude": 53.190414,
+      "longitude": -2.494334
+    }
+  },
+  {
+    "location": "CREWE",
+    "tiploc": "CREWE",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:40:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -11,
+    "plannedDeparture": "2023-02-13T16:40:00",
+    "actualDeparture": "2023-02-13T16:29:00",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "location": "CREWE UP & DOWN LOOP",
+    "tiploc": "CREWUDL",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:40:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -11,
+    "plannedDeparture": "2023-02-13T16:40:00",
+    "actualDeparture": "2023-02-13T16:29:00",
+    "latLong": {
+      "latitude": 53.088144,
+      "longitude": -2.4318491
+    }
+  },
+  {
+    "location": "CREWE",
+    "tiploc": "CREWE",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:40:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -11,
+    "plannedDeparture": "2023-02-13T16:40:00",
+    "actualDeparture": "2023-02-13T16:29:00",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "location": "CREWE UP & DOWN LOOP",
+    "tiploc": "CREWUDL",
+    "eventType": "DEPARTURE",
+    "planned": "2023-02-13T16:40:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -11,
+    "plannedDeparture": "2023-02-13T16:40:00",
+    "actualDeparture": "2023-02-13T16:29:00",
+    "latLong": {
+      "latitude": 53.088144,
+      "longitude": -2.4318491
+    }
+  },
+  {
+    "location": "CREWE",
+    "tiploc": "CREWE",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:35:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -6,
+    "actualArrival": "2023-02-13T16:29:00",
+    "plannedArrival": "2023-02-13T16:35:00",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "location": "CREWE UP & DOWN LOOP",
+    "tiploc": "CREWUDL",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:35:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -6,
+    "actualArrival": "2023-02-13T16:29:00",
+    "plannedArrival": "2023-02-13T16:35:00",
+    "latLong": {
+      "latitude": 53.088144,
+      "longitude": -2.4318491
+    }
+  },
+  {
+    "location": "CREWE",
+    "tiploc": "CREWE",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:35:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -6,
+    "actualArrival": "2023-02-13T16:29:00",
+    "plannedArrival": "2023-02-13T16:35:00",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "location": "CREWE UP & DOWN LOOP",
+    "tiploc": "CREWUDL",
+    "eventType": "ARRIVAL",
+    "planned": "2023-02-13T16:35:00",
+    "actual": "2023-02-13T16:29:00",
+    "variation": -6,
+    "actualArrival": "2023-02-13T16:29:00",
+    "plannedArrival": "2023-02-13T16:35:00",
+    "latLong": {
+      "latitude": 53.088144,
+      "longitude": -2.4318491
+    }
+  },
+  {
+    "location": "CREWE T.M.D. (E)",
+    "tiploc": "CREWEMD",
+    "eventType": "DESTINATION",
+    "planned": "2023-02-13T16:47:00",
+    "actual": "2023-02-13T16:38:00",
+    "variation": -9,
+    "actualArrival": "2023-02-13T16:38:00",
+    "plannedArrival": "2023-02-13T16:47:00",
+    "latLong": {
+      "latitude": 53.09895795,
+      "longitude": -2.460617082
+    }
+  }
+]
