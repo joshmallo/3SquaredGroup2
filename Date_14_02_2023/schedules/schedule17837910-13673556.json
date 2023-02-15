@@ -1,0 +1,126 @@
+[
+  {
+    "departure": "1731",
+    "tiploc": "CREWEMD",
+    "location": "CREWE T.M.D. (E)",
+    "latLong": {
+      "latitude": 53.09895795,
+      "longitude": -2.460617082
+    }
+  },
+  {
+    "departure": "1740",
+    "arrival": "1737",
+    "tiploc": "CREWE",
+    "location": "CREWE",
+    "latLong": {
+      "latitude": 53.088893,
+      "longitude": -2.43281
+    }
+  },
+  {
+    "pass": "1744",
+    "tiploc": "CREWEGL",
+    "location": "CREWE GRESTY LANE",
+    "latLong": {
+      "latitude": 53.07985596,
+      "longitude": -2.436826699
+    }
+  },
+  {
+    "departure": "1808",
+    "arrival": "1748",
+    "tiploc": "CREWGLR",
+    "location": "CREWE GRESTY LANE RECP.",
+    "latLong": {
+      "latitude": 53.07564329,
+      "longitude": -2.446741431
+    }
+  },
+  {
+    "pass": "1812",
+    "tiploc": "CREWEGL2",
+    "location": "CREWEGL2"
+  },
+  {
+    "pass": "1815",
+    "tiploc": "CREWSGJ",
+    "location": "CREWE SALOP GOODS JN",
+    "latLong": {
+      "latitude": 53.085084,
+      "longitude": -2.431268
+    }
+  },
+  {
+    "pass": "1820",
+    "tiploc": "CREWECY",
+    "location": "CREWE COAL YARD",
+    "latLong": {
+      "latitude": 53.101487,
+      "longitude": -2.439736
+    }
+  },
+  {
+    "pass": "1834",
+    "tiploc": "WNSFD",
+    "location": "WINSFORD",
+    "latLong": {
+      "latitude": 53.190414,
+      "longitude": -2.494334
+    }
+  },
+  {
+    "pass": "1840",
+    "tiploc": "HARTFDJ",
+    "location": "HARTFORD JN",
+    "latLong": {
+      "latitude": 53.248657,
+      "longitude": -2.567576
+    }
+  },
+  {
+    "pass": "1843",
+    "tiploc": "ACBG",
+    "location": "ACTON BRIDGE",
+    "latLong": {
+      "latitude": 53.266144,
+      "longitude": -2.602438
+    }
+  },
+  {
+    "pass": "1845",
+    "tiploc": "WEAVERJ",
+    "location": "WEAVER JN",
+    "latLong": {
+      "latitude": 53.302691,
+      "longitude": -2.639255
+    }
+  },
+  {
+    "pass": "1852",
+    "tiploc": "ACGJN",
+    "location": "ACTON GRANGE JN",
+    "latLong": {
+      "latitude": 53.363034,
+      "longitude": -2.624034
+    }
+  },
+  {
+    "pass": "1855",
+    "tiploc": "WRGTWOJ",
+    "location": "WALTON OLD JN.",
+    "latLong": {
+      "latitude": 53.376042,
+      "longitude": -2.603441
+    }
+  },
+  {
+    "arrival": "1858",
+    "tiploc": "ARPLEYS",
+    "location": "ARPLEY SIDINGS",
+    "latLong": {
+      "latitude": 53.38482059,
+      "longitude": -2.598709022
+    }
+  }
+]

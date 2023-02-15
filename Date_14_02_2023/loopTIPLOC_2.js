@@ -33,8 +33,8 @@ TIPLOCs.push("TRFDEUT");
 var activation = 17832465;
 var schedule = 14950458;
 
-var dateStart = "2023-02-13";
-var dateEnd = "2023-02-14";
+var dateStart = "2023-02-14";
+var dateEnd = "2023-02-15";
 
 
 for(let i = 0; i < TIPLOCs.length; i++)
