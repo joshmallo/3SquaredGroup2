@@ -83,11 +83,3 @@ p.menuOptions:hover {
     font-family: 'Open Sans', sans-serif;
     gap: 10px;
 }
-
-#tiplocSearch{
-    align-self: center;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 5px;
-    width: 80%;
-}
