@@ -55,7 +55,7 @@ async function route(e) {
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
             if (route.length != 0){
-                const path = L.polyline.antPath(route, {
+                const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
                     "dashArray": [
                         10,
@@ -71,7 +71,7 @@ async function route(e) {
                 map.addLayer(path);
             }
             if (left.length != 0){
-                const path2 = L.polyline.antPath(left, {
+                const path2 = L.polyline.antPath(left, { // journey left to complete
                     "delay": 800,
                     "dashArray": [
                         10,
