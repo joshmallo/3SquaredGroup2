@@ -1,24 +1,7 @@
 const XLSX = require("xlsx");
 const fs = require('fs');
 
-// read file into memory
-const workBook = XLSX.readFile("tiplocs.xlsx");
-const workSheet = workBook.Sheets["Sheet1"];
-
-const arrTiplocs = XLSX.utils.sheet_to_json(workSheet);
-
-var tiploctemp = []
-
-// loops through the data and appends it to an array
-for (const tiploc of arrTiplocs) {
-    tiploctemp.push(tiploc["TIPLOC"]);
-}
-console.log(tiploctemp) // array of tiplocs
-var slicedArray = tiploctemp.slice(0, 25);
-console.log(slicedArray.toString()); // prints array as a string
-console.log(slicedArray.length);
-
-const jsonFile = require("./tiplocs.json");
+const jsonFile = require("./allTiplocs.json");
 console.log(jsonFile);
 
 slicedArray = jsonFile.slice(0,50);
@@ -62,45 +45,45 @@ slicedArray = jsonFile.slice(0,50);
     }
 } */
 
-function getTiplocs(tiplocArray, date, tiplocsAtOnce) {
+function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, headers) {
     let createNew = true;
-    const headers = new Headers();
-    headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-    headers.append('X-ApiVersion', '1');
     let temp;
-    let tempArray = [];
-    let locationName = `"Location"`;
-    let tiplocName = "Tiploc";
+    let workingTiplocs;
     for (let i = 0; i < tiplocArray.length; i += tiplocsAtOnce) {
+        
         if ((i+tiplocsAtOnce) <= tiplocArray.length) {
             temp = (tiplocArray.slice(i, i+tiplocsAtOnce)).toString(); // gets 25 tiplocs as strings
         } else {
             temp = (tiplocArray.slice(i, tiplocArray.length)).toString(); // gets the remainding tiplocs
         }
-        fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
+        fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${startDate} 00:00:00/${endDate} 23:59:59`, { headers: headers })
         .then(res => res.json())
         .then(data => {
             if (data.length != 0) {
-                var dict = {"Location" : data[0].originLocation,
-                "Tiploc" : data[0].originTiploc};
-                tempArray.push(dict);
-                /* if (createNew) {
+                for (let k = 0; k < data.length; k++) {
+                    const originLocation = data[k].originLocation;
+                    const originTiploc = data[k].originTiploc;
+                    data[k] = {originLocation, originTiploc};
+                }
+                if (createNew) {
                     createNew = false;
-                    console.log(data);
-                    fs.writeFileSync('test.json', JSON.stringify(data, null, 2), 'utf-8');
+                    workingTiplocs = data;
                 }
                 else {
-                    fs.appendFileSync('test.json', JSON.stringify(data, null, 2), 'utf-8');
-                } */
+                    workingTiplocs = workingTiplocs.concat(data);
+                }
+                fs.writeFileSync('tiplocs.json', JSON.stringify(workingTiplocs, null, 2), 'utf-8')
             }
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
     }
-    //console.log()
-    fs.writeFileSync('test.json', JSON.stringify(tempArray, null, 2), 'utf-8');
 }
 
+const headers = new Headers();
+headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
+headers.append('X-ApiVersion', '1');
+
 // 25 is the max tiplocs you can call at once
-getTiplocs(jsonFile, '2023-02-14', 25);
+getWorkingTiplocs(jsonFile, 25, '2023-02-16', '2023-02-16', headers);
