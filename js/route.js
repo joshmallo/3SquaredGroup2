@@ -101,8 +101,8 @@ async function route(e) {
     });
 
     var train = L.icon({
-        iconUrl: 'images/train.png',
-        shadowUrl: 'images/train.png',
+        iconUrl: 'frontend\\images\\train.png',
+        shadowUrl: 'frontend\\images\\train.png',
 
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow
