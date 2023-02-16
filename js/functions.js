@@ -1,4 +1,8 @@
+var tiplocSearch = document.getElementById('tiplocSearch');
+tiplocSearch.addEventListener('input', filterTiplocs);
+
 function expandMenu(e) {
+    closeSecondMenu();
     var secondMenu = document.getElementById('secondMenu');
     secondMenu.style.display = 'inline';
     const headers = new Headers();
@@ -46,4 +50,44 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(e);
+}
+
+function filterTiplocs(){
+    var query = tiplocSearch.value;
+    console.log(query);
+    var container = document.getElementById('menuItems').replaceChildren();
+    var container = document.getElementById('menuItems');
+    if (query != ''){
+        let gettiplocs = fetch("tiplocs.json")
+            .then(r => r.json())
+            .then(data => {
+                for (const item of data) {
+                    if (item.Location.toLowerCase().includes(query.toLowerCase()))
+                    {
+                    var p = document.createElement('p');
+                    p.innerHTML = item.Location;
+                    p.id = item.TIPLOC;
+                    p.addEventListener("click", expandMenu);
+                    p.classList.add('menuOptions');
+                    container.append(p);
+                    }
+                }
+            }
+            )
+    }
+    else {
+        let gettiplocs = fetch("tiplocs.json")
+            .then(r => r.json())
+            .then(data => {
+                for (const item of data) {
+                    var p = document.createElement('p');
+                    p.innerHTML = item.Location;
+                    p.id = item.TIPLOC;
+                    p.addEventListener("click", expandMenu);
+                    p.classList.add('menuOptions');
+                    container.append(p);
+                }
+            }
+            )
+    }
 }

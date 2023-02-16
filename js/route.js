@@ -5,6 +5,8 @@ function route(e) {
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
 
+    // console.log('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' + e.currentTarget.activationId + '/' + e.currentTarget.scheduleId);
+    var lastVisitedTiploc;
     var response = fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + e.currentTarget.activationId + '/' + e.currentTarget.scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
@@ -30,6 +32,11 @@ function route(e) {
                         .bindPopup(item.location);
                 }
             }
+            var fullRoute = route.concat(left);
+            // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
+            //     [5000]).addTo(map);
+            // movingMarker.start();
+            // console.log(fullRoute);
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
             const path = L.polyline.antPath(route, {
