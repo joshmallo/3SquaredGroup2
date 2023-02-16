@@ -1,0 +1,44 @@
+[
+  {
+    "originTiploc": "WMBYEFT",
+    "destinationTiploc": "CREWEMD",
+    "activationId": 17838448,
+    "scheduleId": 13670155
+  },
+  {
+    "originTiploc": "CREWEMD",
+    "destinationTiploc": "DIRFTRR",
+    "activationId": 17838610,
+    "scheduleId": 14220325
+  },
+  {
+    "originTiploc": "CREWEMD",
+    "destinationTiploc": "STAFFRD",
+    "activationId": 17840452,
+    "scheduleId": 13662505
+  },
+  {
+    "originTiploc": "CREWEMD",
+    "destinationTiploc": "WLSDRMT",
+    "activationId": 17840454,
+    "scheduleId": 13672490
+  },
+  {
+    "originTiploc": "STAFFRD",
+    "destinationTiploc": "CREWEMD",
+    "activationId": 17840414,
+    "scheduleId": 13662508
+  },
+  {
+    "originTiploc": "WMBYEFT",
+    "destinationTiploc": "CREWEMD",
+    "activationId": 17841576,
+    "scheduleId": 13670155
+  },
+  {
+    "originTiploc": "CREWEMD",
+    "destinationTiploc": "DIRFTRR",
+    "activationId": 17841792,
+    "scheduleId": 14220325
+  }
+]
