@@ -19,22 +19,24 @@ async function route(e) {
     fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
+            console.log(data[data.length - 1]);
+            console.log(data.pop());
+            console.log(data[data.length - 1]);
+            while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
-            // if (lastVisitedTiploc == 0) completedJourney = false;
             for (const item of data) {
                 if (item.hasOwnProperty('latLong')) {
                     if (lastVisitedTiploc == 0) {
-                        console.log('here');
                         lastVisitedTiploc = data[data.indexOf(item)].tiploc;
                     }
                     var latlng = [item.latLong.latitude, item.latLong.longitude];
-                    if (completedJourney) {
+                    if (completedJourney) { 
                         route.push(latlng);
                     }
                     else {
                         left.push(latlng)
                     }
-                    if (item.tiploc == lastVisitedTiploc)
+                    if (item.tiploc == lastVisitedTiploc) // finds last visited tiploc
                     {
                         completedJourney = false;
                         left.push(latlng);
