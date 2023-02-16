@@ -38,13 +38,9 @@ function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, heade
     }
 }
 
-const headers = new Headers();
-headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-headers.append('X-ApiVersion', '1');
 
-// gets the file with all the tiplocs
-const jsonFile = require("./allTiplocs.json");
 
-// 25 is the max tiplocs you can call at once
-tiplocsAtOnce = 25;
-getWorkingTiplocs(jsonFile, tiplocsAtOnce, '2023-02-16', '2023-02-16', headers);
+
+
+
+module.exports = { getWorkingTiplocs }
