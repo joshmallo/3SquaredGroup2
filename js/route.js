@@ -21,6 +21,7 @@ async function route(e) {
         .then(data => {
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
+            console.log(data);
             for (const item of data) {
                 if (item.hasOwnProperty('latLong')) {
                     if (lastVisitedTiploc == 0) {
@@ -46,11 +47,11 @@ async function route(e) {
                 }
 
             }
-            // var fullRoute = route.concat(left);
+            var fullRoute = route.concat(left);
             // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
             //     [5000]).addTo(map);
             // movingMarker.start();
-            // console.log(fullRoute);
+            console.log(fullRoute);
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
             new L.marker(left[0], {icon: train}).bindPopup('Last updated location').addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
@@ -89,8 +90,8 @@ async function route(e) {
         })
 
     var stationIcon = L.icon({
-        iconUrl: 'assets/station.png',
-        shadowUrl: 'assets/station.png',
+        iconUrl: 'images/station.png',
+        shadowUrl: 'images/station.png',
 
         iconSize: [20, 13], // size of the icon
         shadowSize: [0, 0], // size of the shadow
@@ -100,8 +101,8 @@ async function route(e) {
     });
 
     var train = L.icon({
-        iconUrl: 'assets\\train.png',
-        shadowUrl: 'assets\\train.png',
+        iconUrl: 'images/train.png',
+        shadowUrl: 'images/train.png',
 
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow

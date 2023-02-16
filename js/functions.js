@@ -8,8 +8,7 @@ function expandMenu(e) {
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
-    // var tiploc = e.currentTarget.id;
-    var tiploc = 'THMSLGB';
+    var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
     fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
