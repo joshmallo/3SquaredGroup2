@@ -5,8 +5,8 @@ let gettiplocs = fetch("tiplocs.json")
     .then(data => {
         for (const item of data) {
                 var p = document.createElement('p');
-                p.innerHTML = item.Location;
-                p.id = item.TIPLOC;
+                p.innerHTML = item.OriginLocation;
+                p.id = item.OriginTiploc;
                 p.addEventListener("click", expandMenu);
                 p.classList.add('menuOptions');
                 container.append(p);
