@@ -5,34 +5,37 @@ const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
 headers.append('X-ApiVersion', '1');
 
-//Fetches schedule for specified ID's
+//Schedule of one train 
 
-var activation = 17832465;
-var schedule = 14950458;
+function fetchTrainSchedule(activation, schedule) {
+  return fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
+    .then(response => response.json())
+    .then(data => {
+      fs.writeFileSync(`scheduleBy${activation}${schedule}.json`, JSON.stringify(data, null, 2), 'utf-8');
+      return data;
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+};
 
-fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/${activation}/${schedule}`, { headers: headers })
-.then(res => res.json())
+fetchTrainSchedule('17832465', '14950458')
 .then(data => {
-  fs.writeFileSync(`schedule${activation}-${schedule}.json`, JSON.stringify(data, null, 2), 'utf-8');
+  console.log(data);
 })
 .catch(error => {
   console.error('Error fetching data:', error);
-});
+}); 
 
 
-//Fetches schedule for all objects from tiploc
+//NOT WORKING** Loop through file to create next text file for each schedule
 
-// for (let i = 0; i < data.length; i++) {
-//   var activation = data[i].activationId;
-//   var schedule = data[i].scheduleId;
-//   fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/${activation}/${schedule}`, { headers: headers })
-//     .then(res => res.json())
-//     .then(data => {
-//     console.log(data);
-//   })
-//     .catch(error => {
-//     console.error('Error fetching data:', error);
-// });
-// }
+function loopSchedule() {
+  for (let i = 0; i < data.length; i++) {
+    var activation = data[i].activationId;
+    var schedule = data[i].scheduleId;
+    fetchTrainSchedule(activation, schedule)
+  }
+}
 
-// fs.writeFileSync(`movementByTipLoc.json`, JSON.stringify(data, null, 2), 'utf-8');
+//loopSchedule();

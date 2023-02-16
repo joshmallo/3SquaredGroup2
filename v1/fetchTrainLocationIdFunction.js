@@ -2,7 +2,7 @@ import fs from 'fs';
 
 //As parameters?
 var dateStart = "2023-02-1";
-var dateEnd = "2023-02-14";
+var dateEnd = "2023-02-15";
 
 const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
@@ -22,7 +22,7 @@ function fetchData(tiploc) {
         data[i] = { originTiploc, destinationTiploc, activationId, scheduleId };
       }
       //'Tiploc'.json file
-      fs.writeFileSync(`${tiploc}.json`, JSON.stringify(data, null, 2), 'utf-8');
+      fs.writeFileSync(`locationID.json`, JSON.stringify(data, null, 2), 'utf-8');
       return data;
     })
     .catch(error => {
