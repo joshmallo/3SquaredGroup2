@@ -19,9 +19,6 @@ async function route(e) {
     fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
-            console.log(data[data.length - 1]);
-            console.log(data.pop());
-            console.log(data[data.length - 1]);
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
             for (const item of data) {
@@ -49,7 +46,7 @@ async function route(e) {
                 }
 
             }
-            var fullRoute = route.concat(left);
+            // var fullRoute = route.concat(left);
             // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
             //     [5000]).addTo(map);
             // movingMarker.start();
