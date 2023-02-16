@@ -53,6 +53,7 @@ async function route(e) {
             // movingMarker.start();
             // console.log(fullRoute);
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
+            new L.marker(left[0], {icon: train}).bindPopup('Last updated location').addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey
@@ -99,15 +100,15 @@ async function route(e) {
         popupAnchor: [10, -15] // point from which the popup should open relative to the iconAnchor
     });
 
-    var trainIcon = L.icon({
-        iconUrl: 'assets/train.png',
-        shadowUrl: 'assets/train.png',
+    var train = L.icon({
+        iconUrl: 'assets\\train.png',
+        shadowUrl: 'assets\\train.png',
 
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow
-        iconAnchor: [0, 10], // point of the icon which will correspond to marker's location
+        iconAnchor: [10, 25], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
-        popupAnchor: [10, -15] // point from which the popup should open relative to the iconAnchor
-    });
+        popupAnchor: [10, -15]
+    })
     // map.fitBounds(path);
 }
