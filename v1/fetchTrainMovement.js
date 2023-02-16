@@ -7,7 +7,7 @@ headers.append('X-ApiVersion', '1');
 
 //Movement of one train 
 
-function fetchTrainMovement(activation, schedule) {
+function fetchTrainMovement(activation, schedule, headers) {
   return fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
     .then(response => response.json())
     .then(data => {
@@ -20,7 +20,7 @@ function fetchTrainMovement(activation, schedule) {
     });
 };
 
-fetchTrainMovement('17832465', '14950458')
+fetchTrainMovement('17832465', '14950458', headers)
   .then(data => {
     console.log(data);
   })
@@ -29,7 +29,7 @@ fetchTrainMovement('17832465', '14950458')
   }); 
 
 
-//NOT WORKING** Loop through file to create next text file for each movement
+//NOT WORKING** Loop through file to create new text file for each movement
 
 function loopMovement() {
   for (let i = 0; i < data.length; i++) {
