@@ -108,7 +108,8 @@ async function route(e) {
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [10, 25], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
-        popupAnchor: [10, -15]
+        popupAnchor: [10, -15],
+        forceZIndex: [400]
     })
     // map.fitBounds(path);
 }
