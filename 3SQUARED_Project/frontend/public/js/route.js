@@ -81,8 +81,8 @@ function route(e) {
     });
 
     var trainIcon = L.icon({
-        iconUrl: 'frontend/public/images/train.png',
-        shadowUrl: 'frontend/public/images/train.png',
+        iconUrl: 'images/train.png',
+        shadowUrl: 'images/train.png',
 
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow
