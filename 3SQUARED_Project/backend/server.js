@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/..' + '/backend'))
 app.get('/', (req, res) => 
 {
   getWorkingTiplocs(jsonFile, 25, '2023-02-16', '2023-02-16', headers)
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'webpage', 'index.html'));
+  res.sendFile(path.join('index.html'));
 })
 
 

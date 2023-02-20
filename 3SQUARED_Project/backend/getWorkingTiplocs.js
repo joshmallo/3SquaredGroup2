@@ -38,9 +38,4 @@ function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, heade
     }
 }
 
-
-
-
-
-
 module.exports = { getWorkingTiplocs }
