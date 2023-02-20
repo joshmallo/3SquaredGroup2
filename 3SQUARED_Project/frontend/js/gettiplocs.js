@@ -1,6 +1,6 @@
 var container = document.getElementById('menuItems');
 
-let gettiplocs = fetch("./3SQUARED_Project/frontend/tiplocs.json")
+let gettiplocs = fetch("./tiplocs.json")
     .then(r => r.json())
     .then(data => {
         for (const item of data) {

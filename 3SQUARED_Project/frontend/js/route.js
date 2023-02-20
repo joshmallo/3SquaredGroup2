@@ -90,8 +90,8 @@ async function route(e) {
         })
 
     var station = L.icon({
-        iconUrl: 'assets/station.png',
-        shadowUrl: 'assets/station.png',
+        iconUrl: '../assets/station.png',
+        shadowUrl: '../assets/station.png',
 
         iconSize: [20, 13], // size of the icon
         shadowSize: [0, 0], // size of the shadow
@@ -101,8 +101,8 @@ async function route(e) {
     });
 
     var train = L.icon({
-        iconUrl: 'assets/train.png',
-        shadowUrl: 'assets/train.png',
+        iconUrl: '../assets/train.png',
+        shadowUrl: '../assets/train.png',
 
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow
