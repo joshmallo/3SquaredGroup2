@@ -8,8 +8,7 @@ function expandMenu(e) {
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
-    // var tiploc = e.currentTarget.id;
-    var tiploc = 'THMSLGB';
+    var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
     fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
@@ -62,11 +61,11 @@ function filterTiplocs(){
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (item.Location.toLowerCase().includes(query.toLowerCase()))
+                    if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
                     {
                     var p = document.createElement('p');
-                    p.innerHTML = item.Location;
-                    p.id = item.TIPLOC;
+                    p.innerHTML = item.originLocation;
+                    p.id = item.originTiploc;
                     p.addEventListener("click", expandMenu);
                     p.classList.add('menuOptions');
                     container.append(p);
@@ -81,8 +80,8 @@ function filterTiplocs(){
             .then(data => {
                 for (const item of data) {
                     var p = document.createElement('p');
-                    p.innerHTML = item.Location;
-                    p.id = item.TIPLOC;
+                    p.innerHTML = item.originLocation;
+                    p.id = item.originTiploc;
                     p.addEventListener("click", expandMenu);
                     p.classList.add('menuOptions');
                     container.append(p);
