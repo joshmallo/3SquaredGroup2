@@ -99,7 +99,17 @@ async function route(e) {
         shadowAnchor: [0, 0],  // the same for the shadow
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
     });
+    var tipIcon = L.icon({
+        iconUrl: '../assets/rec.png',
+        shadowUrl: '../assets/rec.png',
+        
+        iconSize: [20, 13], // size of the icon
+        shadowSize: [0, 0], // size of the shadow
+        iconAnchor: [10, 5], // point of the icon which will correspond to marker's location
+        shadowAnchor: [0, 0],  // the same for the shadow
+        popupAnchor: [0, 0]
 
+    })
     var train = L.icon({
         iconUrl: '../assets/train.png',
         shadowUrl: '../assets/train.png',
